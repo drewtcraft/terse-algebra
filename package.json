@@ -1,0 +1,15 @@
+{
+  "name": "terse-algebra",
+  "version": "0.0.1",
+  "description": "super unsafe algebra parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha index.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
