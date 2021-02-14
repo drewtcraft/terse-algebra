@@ -96,19 +96,23 @@ module.exports = class PositionalAlgebra {
 
 		const cleaned = clean(algebra);
 
+		// haha woah!
+		// sometimes when we parse something once, we insert variables
+		// so if my y is 'h * 2' and my height is 't', after the first
+		// pass we will have 't * 2', whereas we need something like '200 * 2'
 		const exec = cleaned.split('')
 			.reduce((acc, c, i) => {
 				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
 				return acc;
 			}, [])
+			.join('')
+			.split('')
 			.reduce((acc, c, i) => {
 				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
 				return acc;
 			}, [])
-			.reduce((acc, c, i) => {
-				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
-				return acc;
-			}, [])
+			.join('')
+			.split('')
 			.reduce((acc, c, i) => {
 				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
 				return acc;
