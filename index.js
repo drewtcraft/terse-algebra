@@ -101,6 +101,18 @@ module.exports = class PositionalAlgebra {
 				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
 				return acc;
 			}, [])
+			.reduce((acc, c, i) => {
+				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
+				return acc;
+			}, [])
+			.reduce((acc, c, i) => {
+				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
+				return acc;
+			}, [])
+			.reduce((acc, c, i) => {
+				acc[i] = isSymbol(c) ? this.translate(c, asset) : c;
+				return acc;
+			}, [])
 			.join('');
 
 		if (!exec) {
