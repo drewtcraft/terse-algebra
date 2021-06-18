@@ -123,6 +123,8 @@ module.exports = class PositionalAlgebra {
 			return console.warn('no exec in parser');
 		}
 
+		exec = exec.replace(/\D00\D/g, '0')
+
 	 	return Function('"use strict";return (' + exec + ')')();
 	}
 
